@@ -4,6 +4,24 @@
         outline: 1px dotted red;
     }
 
+    h2 ~ h1,
+    h3 ~ h1,
+    h4 ~ h1,
+    h5 ~ h1,
+    h6 ~ h1,
+    h3 ~ h2,
+    h4 ~ h2,
+    h5 ~ h2,
+    h6 ~ h2,
+    h4 ~ h3,
+    h5 ~ h3,
+    h6 ~ h3,
+    h5 ~ h4,
+    h6 ~ h4,
+    h6 ~ h5 {
+        outline: 2px dotted red;
+    }
+    
     /* ENLACES SIN LINK O CON LINK MAL PUESTO */
 
     a:not([href]),
