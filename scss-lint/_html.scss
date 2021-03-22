@@ -1,0 +1,10 @@
+@mixin htmlLang {
+  html:not([lang]),
+  html[lang=""] {
+    outline: 1px dotted red;
+  }
+}
+
+@if map-get($html, "htmlLang") {
+  @include htmlLang;
+}

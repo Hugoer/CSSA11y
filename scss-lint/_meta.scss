@@ -1,0 +1,44 @@
+@mixin utf8 {
+  meta[charset]:not([charset="UTF-8"]) {
+    outline: 1px dotted red;
+  }
+}
+
+@mixin userScalable {
+  meta[name="viewport"][content*="user-scalable=no"] {
+    outline: 1px dotted cyan;
+  }
+}
+
+@mixin maximumScale {
+  // https://web.dev/meta-viewport/
+  meta[name="viewport"][content*="maximum-scale=1"],
+  meta[name="viewport"][content*="maximum-scale=2"],
+  meta[name="viewport"][content*="maximum-scale=3"],
+  meta[name="viewport"][content*="maximum-scale=4"] {
+    outline: 1px dotted cyan;
+  }
+}
+
+@mixin xuaCompatible {
+  meta[http-equiv="X-UA-Compatible"],
+  meta[http-equiv][content="IE=edge"] {
+    outline: solid 1px red;
+  }
+}
+
+@if map-get($meta, "utf8") {
+  @include utf8;
+}
+
+@if map-get($meta, "userScalable") {
+  @include userScalable;
+}
+
+@if map-get($meta, "maximumScale") {
+  @include maximumScale;
+}
+
+@if map-get($meta, "xuaCompatible") {
+  @include xuaCompatible;
+}

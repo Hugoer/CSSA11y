@@ -1,0 +1,53 @@
+@mixin noId {
+  input:not([id]),
+  select:not([id]),
+  textarea:not([id]) {
+    outline: 1px dotted cyan;
+  }
+}
+
+@mixin labelFor {
+  label:not([for]) {
+    outline: 1px dotted cyan;
+  }
+}
+
+@mixin noName {
+  input:not([name]),
+  select:not([name]),
+  textarea:not([name]) {
+      outline: 1px dotted lawngreen;
+  }
+}
+
+@mixin formNoNameOrNotId {
+  form:not([name]):not([id]) {
+    outline: 1px dotted lawngreen;
+  }
+}
+
+@mixin buttonNoType {
+  button:not([type]) {
+    color: red;
+  }
+}
+
+@if map-get($form, "noId") {
+  @include noId;
+}
+
+@if map-get($form, "labelFor") {
+  @include labelFor;
+}
+
+@if map-get($form, "noName") {
+  @include noName;
+}
+
+@if map-get($form, "formNoNameOrNotId") {
+  @include formNoNameOrNotId;
+}
+
+@if map-get($form, "buttonNoType") {
+  @include buttonNoType;
+}

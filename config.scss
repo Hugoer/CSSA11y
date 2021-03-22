@@ -1,0 +1,61 @@
+$scripts: () !default;
+$scripts: map-merge(
+  (
+    "obsoleteTypes" :         true,
+    "scriptNoAsyncOrDefer" :  true
+  ),
+  $scripts
+);
+
+$meta: () !default;
+$meta : map-merge(
+  (
+    "utf8" :          true,
+    "userScalable":   true,
+    "maximumScale":   true, 
+    "xuaCompatible":  true  
+  ),
+  $meta
+);
+
+$lists: () !default;
+$lists : map-merge(
+  (
+    "dlChilds" :  true,
+    "listChilds": true,
+    "tabindex":   true 
+  ),
+  $lists
+);
+
+$html: () !default;
+$html : map-merge(
+  (
+    "dlChilds" :  true
+  ),
+  $html
+);
+
+$form: () !default;
+$form : map-merge(
+  (
+    "noId" :              true,
+    "labelFor":           true,
+    "noName":             true, 
+    "formNoNameOrNotId":  true, 
+    "buttonNoType":       true 
+  ),
+  $form
+);
+
+$form: () !default;
+$form : map-merge(
+  (
+    "noId" :              true,
+    "labelFor":           true,
+    "noName":             true, 
+    "formNoNameOrNotId":  true, 
+    "buttonNoType":       true 
+  ),
+  $form
+);

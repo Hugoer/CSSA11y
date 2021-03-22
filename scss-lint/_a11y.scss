@@ -1,0 +1,53 @@
+@mixin inlineStyles {
+  *[style]{
+    outline: 1px dotted red;
+  }
+}
+
+h2 ~ h1,
+h3 ~ h1,
+h4 ~ h1,
+h5 ~ h1,
+h6 ~ h1,
+h3 ~ h2:first-of-type,
+h4 ~ h2:first-of-type,
+h5 ~ h2:first-of-type,
+h6 ~ h2:first-of-type,
+h4 ~ h3:first-of-type,
+h5 ~ h3:first-of-type,
+h6 ~ h3:first-of-type,
+h5 ~ h4:first-of-type,
+h6 ~ h4:first-of-type,
+h6 ~ h5:first-of-type {
+  outline: 2px dotted blue;
+}
+
+h1 ~ h1 {
+  outline: 2px dotted blue;
+}
+
+a:not([href]),
+a[href="#"],
+a[href=""],
+a[href*="javascript:void(0)"] {
+  outline: 1px dotted gold;
+}
+
+a:not(aria-label) {
+  outline: 1px dotted gold;
+}
+
+input[type="image"]:not([alt]),
+input[type="image"][alt=""],
+object:not([alt]),
+object[alt=""],
+img:not([alt]),
+img[alt=""] {
+  outline: 1px dotted deeppink;
+  filter:blur(100%);
+}
+
+button:empty,
+a:empty {
+  outline: 1px dotted lawngreen;
+}

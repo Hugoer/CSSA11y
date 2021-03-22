@@ -1,0 +1,25 @@
+@import '../config.scss';
+
+@mixin obsoleteTypes {
+  script[type="text/javascript"],
+  link[rel="stylesheet"][type="text/css"] {
+    outline: 1px dotted lawngreen;
+  }
+}
+
+@mixin scriptNoAsyncOrDefer {
+  script:not([async]):not([defer]) {
+    display:block;
+    padding:1px;
+    background-color:blue;
+    margin-bottom: 3px;
+  }
+}
+
+@if map-get($scripts, "obsoleteTypes") {
+  @include obsoleteTypes;
+}
+
+@if map-get($scripts, "scriptNoAsyncOrDefer") {
+  @include scriptNoAsyncOrDefer;
+}

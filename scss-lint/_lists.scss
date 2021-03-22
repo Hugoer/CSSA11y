@@ -1,0 +1,30 @@
+@mixin dlChilds {
+  dl :not(:is(dt, dd,script,template, div)):first-child {
+    border: solid 1px red;
+  }
+}
+
+@mixin listChilds {
+  ol :not(:is(li,script,template)):first-child,
+  ul :not(:is(li,script,template)):first-child {
+    border: solid 1px red;
+  }
+}
+
+@mixin tabindex {
+  :not([tabindex="-1"]):not([tabindex="0"]):not([tabindex="1"])  {
+    border: solid 1px red;
+  }
+}
+
+@if map-get($lists, "dlChilds") {
+  @include dlChilds;
+}
+
+@if map-get($lists, "listChilds") {
+  @include listChilds;
+}
+
+@if map-get($lists, "tabindex") {
+  @include tabindex;
+}
