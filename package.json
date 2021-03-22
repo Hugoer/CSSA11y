@@ -1,7 +1,7 @@
 {
-  "name": "css-a11y",
+  "name": "cssa11y",
   "version": "1.0.0",
-  "description": "CSS helpers to improve a11y and html god practices",
+  "description": "CSS helpers to improve a11y and html good practices",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass ./scss-lint.scss scss-lint.css"
