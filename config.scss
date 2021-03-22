@@ -59,3 +59,15 @@ $form : map-merge(
   ),
   $form
 );
+
+$a11y: () !default;
+$a11y : map-merge(
+  (
+    "inlineStyles": true,
+    "headings":     true,
+    "linksValids":  true,
+    "altRequired":  true,
+    "emptyActions": true
+  ),
+  $a11y
+);
