@@ -1,27 +1,22 @@
 {
   "name": "cssa11y",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "CSS helpers to improve a11y and html good practices",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass ./scss-lint.scss scss-lint.css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hugoer/CSS-A11y.git"
+    "url": "git+https://github.com/Hugoer/CSSA11y.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hugoer/CSS-A11y/issues"
+    "url": "https://github.com/Hugoer/CSSA11y/issues"
   },
-  "homepage": "https://github.com/Hugoer/CSS-A11y#readme",
+  "homepage": "https://github.com/Hugoer/CSSA11y#readme",
   "dependencies": {
-    "node-sass": "^5.0.0",
-    "save-dev": "0.0.1-security"
-  },
-  "devDependencies": {
-    "clean-publish": "^2.1.1"
+    "node-sass": "^5.0.0"
   }
 }
