@@ -3,4 +3,7 @@
   @if $debug {
     @debug "[#{$file}]: #{$validation}";
   }
+  @if $comments {
+    /* [#{$file}]: #{$validation} */
+  }
 }

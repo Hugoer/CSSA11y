@@ -1,6 +1,6 @@
 {
   "name": "cssa11y",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "CSS helpers to improve a11y and html good practices",
   "scripts": {
     "scss": "node-sass ./scss-lint/scss-lint.scss ./scss-lint.css"
