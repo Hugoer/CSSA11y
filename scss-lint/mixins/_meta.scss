@@ -1,3 +1,5 @@
+@import './debug';
+
 @mixin utf8 {
   meta[charset]:not([charset="UTF-8"]) {
     outline: 1px dotted red;
@@ -28,17 +30,21 @@
 }
 
 @if map-get($meta, "utf8") {
+  @include showDebug("_meta.scss","utf8");
   @include utf8;
 }
 
 @if map-get($meta, "userScalable") {
+  @include showDebug("_meta.scss","userScalable");
   @include userScalable;
 }
 
 @if map-get($meta, "maximumScale") {
+  @include showDebug("_meta.scss","maximumScale");
   @include maximumScale;
 }
 
 @if map-get($meta, "xuaCompatible") {
+  @include showDebug("_meta.scss","xuaCompatible");
   @include xuaCompatible;
 }

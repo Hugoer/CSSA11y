@@ -1,3 +1,5 @@
+@import './debug';
+
 @mixin dlChilds {
   dl :not(:is(dt, dd,script,template, div)):first-child {
     border: solid 1px red;
@@ -18,13 +20,16 @@
 }
 
 @if map-get($lists, "dlChilds") {
+  @include showDebug("_lists.scss","dlChilds");
   @include dlChilds;
 }
 
 @if map-get($lists, "listChilds") {
+  @include showDebug("_lists.scss","listChilds");
   @include listChilds;
 }
 
 @if map-get($lists, "tabindex") {
+  @include showDebug("_lists.scss","tabindex");
   @include tabindex;
 }

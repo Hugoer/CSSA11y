@@ -1,3 +1,5 @@
+@import './debug';
+
 @mixin noId {
   input:not([id]),
   select:not([id]),
@@ -33,21 +35,26 @@
 }
 
 @if map-get($form, "noId") {
+  @include showDebug("_forms.scss","noId");
   @include noId;
 }
 
 @if map-get($form, "labelFor") {
+  @include showDebug("_forms.scss","labelFor");
   @include labelFor;
 }
 
 @if map-get($form, "noName") {
+  @include showDebug("_forms.scss","noName");
   @include noName;
 }
 
 @if map-get($form, "formNoNameOrNotId") {
+  @include showDebug("_forms.scss","formNoNameOrNotId");
   @include formNoNameOrNotId;
 }
 
 @if map-get($form, "buttonNoType") {
+  @include showDebug("_forms.scss","buttonNoType");
   @include buttonNoType;
 }

@@ -13,3 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.4
 * Add main section to package.json
+
+## 0.0.5
+* Add debug option to show what validation is included
+* Fix bug _a11y.scss variable name

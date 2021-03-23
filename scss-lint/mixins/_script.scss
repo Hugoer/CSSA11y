@@ -1,4 +1,4 @@
-@import '../config.scss';
+@import './debug';
 
 @mixin obsoleteTypes {
   script[type="text/javascript"],
@@ -17,9 +17,11 @@
 }
 
 @if map-get($scripts, "obsoleteTypes") {
+  @include showDebug("_script.scss","obsoleteTypes");
   @include obsoleteTypes;
 }
 
 @if map-get($scripts, "scriptNoAsyncOrDefer") {
+  @include showDebug("_script.scss","scriptNoAsyncOrDefer");
   @include scriptNoAsyncOrDefer;
 }

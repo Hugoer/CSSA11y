@@ -1,3 +1,5 @@
+@import './debug';
+
 @mixin inlineStyles {
   *[style]{
     outline: 1px dotted red;
@@ -61,22 +63,27 @@
   }
 }
 
-@if map-get($form, "inlineStyles") {
+@if map-get($a11y, "inlineStyles") {
+  @include showDebug("_a11y.scss","inlineStyles");
   @include inlineStyles;
 }
 
-@if map-get($form, "headings") {
+@if map-get($a11y, "headings") {
+  @include showDebug("_a11y.scss","headings");
   @include headings;
 }
 
-@if map-get($form, "linksValids") {
+@if map-get($a11y, "linksValids") {
+  @include showDebug("_a11y.scss","linksValids");
   @include linksValids;
 }
 
-@if map-get($form, "altRequired") {
+@if map-get($a11y, "altRequired") {
+  @include showDebug("_a11y.scss","altRequired");
   @include altRequired;
 }
 
-@if map-get($form, "emptyActions") {
+@if map-get($a11y, "emptyActions") {
+  @include showDebug("_a11y.scss","emptyActions");
   @include emptyActions;
 }
