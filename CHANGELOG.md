@@ -10,3 +10,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.3
 * Fix typo
+
+## 0.0.4
+* Add main section to package.json
