@@ -1,4 +1,4 @@
-@import '../config.scss';
+@import '../../config.scss';
 @mixin showDebug($file,$validation) {
   @if $debug {
     @debug "[#{$file}]: #{$validation}";

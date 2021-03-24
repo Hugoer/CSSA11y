@@ -1,9 +1,13 @@
-@import './debug';
+@import './utils/debug';
+
+:root{
+  --htmlNoLang: #{$html-color};
+}
 
 @mixin htmlLang {
   html:not([lang]),
   html[lang=""] {
-    outline: 1px dotted red;
+    outline: 1px dotted var(--htmlNoLang);
   }
 }
 

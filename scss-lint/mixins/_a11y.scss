@@ -1,8 +1,17 @@
-@import './debug';
+@import './utils/debug';
+
+:root{
+  --inlineStyles: #{$a11y-color};
+  --headingsOrderIncorrect: #{$a11y-color};
+  --linkRefInvalid: #{$a11y-color};
+  --linkWithoutAriaLabel: #{$a11y-color};
+  --altRequired: #{$a11y-color};
+  --emptyActions: #{$a11y-color};
+}
 
 @mixin inlineStyles {
   *[style]{
-    outline: 1px dotted red;
+    outline: 1px dotted var(--inlineStyles);
   }
 }
 
@@ -22,11 +31,11 @@
   h5 ~ h4:first-of-type,
   h6 ~ h4:first-of-type,
   h6 ~ h5:first-of-type {
-    outline: 2px dotted blue;
+    outline: 2px dotted var(--headingsOrderIncorrect);
   }
   
   h1 ~ h1 {
-    outline: 2px dotted blue;
+    outline: 2px dotted var(--headingsOrderIncorrect);
   }
 }
 
@@ -36,12 +45,14 @@
   a[href="#"],
   a[href=""],
   a[href*="javascript:void(0)"] {
-    outline: 1px dotted gold;
+    outline: 1px dotted var(--linkRefInvalid);
   }
+}
 
-  a:not(aria-label) {
-    outline: 1px dotted gold;
-  }
+@mixin linkWithoutAriaLabel {
+  a:not([aria-label]) {
+    outline: 1px dotted var(--linkWithoutAriaLabel);
+  }  
 }
 
 @mixin altRequired {
@@ -51,15 +62,26 @@
   object[alt=""],
   img:not([alt]),
   img[alt=""] {
-    outline: 1px dotted deeppink;
-    filter:blur(100%);
+    outline: 1px dotted var(--altRequired);
+    filter:blur(3px);
   }
 }
 
 @mixin emptyActions {
   button:empty,
   a:empty {
-    outline: 1px dotted lawngreen;
+    outline: 2px dotted var(--emptyActions);
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      min-width: 2px;
+      min-height: 2px;
+      border: 5px solid var(--emptyActions);
+      border-radius: 10px;
+      transform: rotate( 5deg);
+      pointer-events: none;
+    }
   }
 }
 
@@ -76,6 +98,11 @@
 @if map-get($a11y, "linksValids") {
   @include showDebug("_a11y.scss","linksValids");
   @include linksValids;
+}
+
+@if map-get($a11y, "linkWithoutAriaLabel") {
+  @include showDebug("_a11y.scss","linkWithoutAriaLabel");
+  @include linkWithoutAriaLabel;
 }
 
 @if map-get($a11y, "altRequired") {

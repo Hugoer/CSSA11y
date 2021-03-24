@@ -1,21 +1,27 @@
-@import './debug';
+@import './utils/debug';
+
+:root{
+  --dlIncorrectFirstChild: #{$lists-color};
+  --listIncorrectFirstChild: #{$lists-color};
+  --tabIndexIncorrectValue: #{$lists-color};
+}
 
 @mixin dlChilds {
   dl :not(:is(dt, dd,script,template, div)):first-child {
-    border: solid 1px red;
+    outline: solid 1px var(--dlIncorrectFirstChild);
   }
 }
 
 @mixin listChilds {
   ol :not(:is(li,script,template)):first-child,
   ul :not(:is(li,script,template)):first-child {
-    border: solid 1px red;
+    outline: solid 1px var(--listIncorrectFirstChild);
   }
 }
 
 @mixin tabindex {
-  :not([tabindex="-1"]):not([tabindex="0"]):not([tabindex="1"])  {
-    border: solid 1px red;
+  [tabindex]:not([tabindex="-1"]):not([tabindex="0"]):not([tabindex="1"])  {
+    outline: solid 1px var(--tabIndexIncorrectValue);
   }
 }
 

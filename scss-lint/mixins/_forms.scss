@@ -1,16 +1,24 @@
-@import './debug';
+@import './utils/debug';
+
+:root {
+  --elementWithoutId: #{$form-color};
+  --labelWithoutFor: #{$form-color};
+  --elementWithoutName: #{$form-color};
+  --formWithoutNameOrId: #{$form-color};
+  --buttonWithoutType: #{$form-color};
+}
 
 @mixin noId {
   input:not([id]),
   select:not([id]),
   textarea:not([id]) {
-    outline: 1px dotted cyan;
+    outline: 1px dotted var(--elementWithoutId);
   }
 }
 
 @mixin labelFor {
   label:not([for]) {
-    outline: 1px dotted cyan;
+    outline: 1px dotted var(--labelWithoutFor);
   }
 }
 
@@ -18,19 +26,19 @@
   input:not([name]),
   select:not([name]),
   textarea:not([name]) {
-      outline: 1px dotted lawngreen;
+      outline: 1px dotted var(--elementWithoutName);
   }
 }
 
 @mixin formNoNameOrNotId {
   form:not([name]):not([id]) {
-    outline: 1px dotted lawngreen;
+    outline: 1px dotted var(--formWithoutNameOrId);
   }
 }
 
 @mixin buttonNoType {
   button:not([type]) {
-    color: red;
+    outline: 1px dotted var(--buttonWithoutType);
   }
 }
 

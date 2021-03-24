@@ -20,3 +20,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.6
 * Add comments option
+
+## 1.0.0
+* Add custom properties to show the error in devtools and not only the selector

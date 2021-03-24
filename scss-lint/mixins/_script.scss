@@ -1,9 +1,14 @@
-@import './debug';
+@import './utils/debug';
+
+:root{
+  --scriptObsoleteTypes: #{$scripts-color};
+  --scriptNoAsyncOrDefer: #{$scripts-color};
+}
 
 @mixin obsoleteTypes {
   script[type="text/javascript"],
   link[rel="stylesheet"][type="text/css"] {
-    outline: 1px dotted lawngreen;
+    outline: 1px dotted var(--scriptObsoleteTypes);
   }
 }
 
@@ -11,7 +16,7 @@
   script:not([async]):not([defer]) {
     display:block;
     padding:1px;
-    background-color:blue;
+    background-color: var(--scriptNoAsyncOrDefer);
     margin-bottom: 3px;
   }
 }

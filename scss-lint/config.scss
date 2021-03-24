@@ -1,13 +1,54 @@
-$debug:true!default;
-$comments:true!default;
+$debug:     true!default;
+$comments:  true!default;
 
-$scripts: () !default;
-$scripts: map-merge(
+$a11y-color:    #F44336!default;
+$form-color:    #0097A7!default;
+$html-color:    #BCAAA4!default;
+$lists-color:   #E64A19!default;
+$meta-color:    #7B1FA2!default;
+$scripts-color: #E91E63!default;
+
+$a11y: () !default;
+$a11y : map-merge(
   (
-    "obsoleteTypes" :         true,
-    "scriptNoAsyncOrDefer" :  true
+    "inlineStyles":         true,
+    "headings":             true,
+    "linksValids":          true,
+    "linkWithoutAriaLabel": true,
+    "altRequired":          true,
+    "emptyActions":         true
   ),
-  $scripts
+  $a11y
+);
+
+$form: () !default;
+$form : map-merge(
+  (
+    "noId" :              true,
+    "labelFor":           true,
+    "noName":             true, 
+    "formNoNameOrNotId":  true, 
+    "buttonNoType":       true 
+  ),
+  $form
+);
+
+$html: () !default;
+$html : map-merge(
+  (
+    "dlChilds" :  true
+  ),
+  $html
+);
+
+$lists: () !default;
+$lists : map-merge(
+  (
+    "dlChilds" :  true,
+    "listChilds": true,
+    "tabindex":   true 
+  ),
+  $lists
 );
 
 $meta: () !default;
@@ -21,56 +62,11 @@ $meta : map-merge(
   $meta
 );
 
-$lists: () !default;
-$lists : map-merge(
+$scripts: () !default;
+$scripts: map-merge(
   (
-    "dlChilds" :  true,
-    "listChilds": true,
-    "tabindex":   true 
+    "obsoleteTypes" :         true,
+    "scriptNoAsyncOrDefer" :  true
   ),
-  $lists
-);
-
-$html: () !default;
-$html : map-merge(
-  (
-    "dlChilds" :  true
-  ),
-  $html
-);
-
-$form: () !default;
-$form : map-merge(
-  (
-    "noId" :              true,
-    "labelFor":           true,
-    "noName":             true, 
-    "formNoNameOrNotId":  true, 
-    "buttonNoType":       true 
-  ),
-  $form
-);
-
-$form: () !default;
-$form : map-merge(
-  (
-    "noId" :              true,
-    "labelFor":           true,
-    "noName":             true, 
-    "formNoNameOrNotId":  true, 
-    "buttonNoType":       true 
-  ),
-  $form
-);
-
-$a11y: () !default;
-$a11y : map-merge(
-  (
-    "inlineStyles": true,
-    "headings":     true,
-    "linksValids":  true,
-    "altRequired":  true,
-    "emptyActions": true
-  ),
-  $a11y
+  $scripts
 );
