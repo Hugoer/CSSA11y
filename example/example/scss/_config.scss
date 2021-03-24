@@ -1,0 +1,48 @@
+$debug: false;
+
+$scripts: (
+    "obsoleteTypes" :         true,
+    "scriptNoAsyncOrDefer" :  true
+);
+
+$meta : (
+  "utf8" :          true,
+  "userScalable":   true,
+  "maximumScale":   true, 
+  "xuaCompatible":  true  
+);
+
+$lists : (
+  "dlChilds" :  true,
+  "listChilds": true,
+  "tabindex":   true 
+);
+
+$html : (
+  "dlChilds" :  true
+);
+
+$form : (
+  "noId" :              true,
+  "labelFor":           true,
+  "noName":             true, 
+  "formNoNameOrNotId":  true, 
+  "buttonNoType":       true
+);
+
+$form : (
+  "noId" :              true,
+  "labelFor":           true,
+  "noName":             true, 
+  "formNoNameOrNotId":  true, 
+  "buttonNoType":       true 
+);
+
+$a11y : (
+  "inlineStyles":           true,
+  "headings":               true,
+  "linksValids":            true,
+  "linkWithoutAriaLabel":   true,
+  "altRequired":            true,
+  "emptyActions":           true
+);

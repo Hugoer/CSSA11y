@@ -1,0 +1,163 @@
+:root {
+  --inlineStyles: #F44336;
+  --headingsOrderIncorrect: #F44336;
+  --linkRefInvalid: #F44336;
+  --linkWithoutAriaLabel: #F44336;
+  --altRequired: #F44336;
+  --emptyActions: #F44336; }
+
+/* [_a11y.scss]: inlineStyles */
+*[style] {
+  outline: 1px dotted var(--inlineStyles); }
+
+/* [_a11y.scss]: headings */
+h2 ~ h1,
+h3 ~ h1,
+h4 ~ h1,
+h5 ~ h1,
+h6 ~ h1,
+h3 ~ h2:first-of-type,
+h4 ~ h2:first-of-type,
+h5 ~ h2:first-of-type,
+h6 ~ h2:first-of-type,
+h4 ~ h3:first-of-type,
+h5 ~ h3:first-of-type,
+h6 ~ h3:first-of-type,
+h5 ~ h4:first-of-type,
+h6 ~ h4:first-of-type,
+h6 ~ h5:first-of-type {
+  outline: 2px dotted var(--headingsOrderIncorrect); }
+
+h1 ~ h1 {
+  outline: 2px dotted var(--headingsOrderIncorrect); }
+
+/* [_a11y.scss]: linksValids */
+a:not([href]),
+a[href="#"],
+a[href=""],
+a[href*="javascript:void(0)"] {
+  outline: 1px dotted var(--linkRefInvalid); }
+
+/* [_a11y.scss]: linkWithoutAriaLabel */
+a:not([aria-label]) {
+  outline: 1px dotted var(--linkWithoutAriaLabel); }
+
+/* [_a11y.scss]: altRequired */
+input[type="image"]:not([alt]),
+input[type="image"][alt=""],
+object:not([alt]),
+object[alt=""],
+img:not([alt]),
+img[alt=""] {
+  outline: 1px dotted var(--altRequired);
+  filter: blur(3px); }
+
+/* [_a11y.scss]: emptyActions */
+button:empty,
+a:empty {
+  outline: 2px dotted var(--emptyActions); }
+  button:empty::after,
+  a:empty::after {
+    content: '';
+    display: block;
+    position: absolute;
+    min-width: 2px;
+    min-height: 2px;
+    border: 5px solid var(--emptyActions);
+    border-radius: 10px;
+    transform: rotate(5deg);
+    pointer-events: none; }
+
+:root {
+  --elementWithoutId: #0097A7;
+  --labelWithoutFor: #0097A7;
+  --elementWithoutName: #0097A7;
+  --formWithoutNameOrId: #0097A7;
+  --buttonWithoutType: #0097A7; }
+
+/* [_forms.scss]: noId */
+input:not([id]),
+select:not([id]),
+textarea:not([id]) {
+  outline: 1px dotted var(--elementWithoutId); }
+
+/* [_forms.scss]: labelFor */
+label:not([for]) {
+  outline: 1px dotted var(--labelWithoutFor); }
+
+/* [_forms.scss]: noName */
+input:not([name]),
+select:not([name]),
+textarea:not([name]) {
+  outline: 1px dotted var(--elementWithoutName); }
+
+/* [_forms.scss]: formNoNameOrNotId */
+form:not([name]):not([id]) {
+  outline: 1px dotted var(--formWithoutNameOrId); }
+
+/* [_forms.scss]: buttonNoType */
+button:not([type]) {
+  outline: 1px dotted var(--buttonWithoutType); }
+
+:root {
+  --htmlNoLang: #BCAAA4; }
+
+:root {
+  --dlIncorrectFirstChild: #E64A19;
+  --listIncorrectFirstChild: #E64A19;
+  --tabIndexIncorrectValue: #E64A19; }
+
+/* [_lists.scss]: dlChilds */
+dl :not(:is(dt, dd, script, template, div)):first-child {
+  outline: solid 1px var(--dlIncorrectFirstChild); }
+
+/* [_lists.scss]: listChilds */
+ol :not(:is(li, script, template)):first-child,
+ul :not(:is(li, script, template)):first-child {
+  outline: solid 1px var(--listIncorrectFirstChild); }
+
+/* [_lists.scss]: tabindex */
+[tabindex]:not([tabindex="-1"]):not([tabindex="0"]):not([tabindex="1"]) {
+  outline: solid 1px var(--tabIndexIncorrectValue); }
+
+:root {
+  --metaWithCharsetIncorrect: #7B1FA2;
+  --viewportUserScalableWrong: #7B1FA2;
+  --viewportMaximumScaleLessThan5: #7B1FA2;
+  --metaXUACompatibleObsolete: #7B1FA2; }
+
+/* [_meta.scss]: utf8 */
+meta[charset]:not([charset="UTF-8"]) {
+  outline: 1px dotted var(--metaWithCharsetIncorrect); }
+
+/* [_meta.scss]: userScalable */
+meta[name="viewport"][content*="user-scalable=no"] {
+  outline: 1px dotted var(--viewportUserScalableWrong); }
+
+/* [_meta.scss]: maximumScale */
+meta[name="viewport"][content*="maximum-scale=1"],
+meta[name="viewport"][content*="maximum-scale=2"],
+meta[name="viewport"][content*="maximum-scale=3"],
+meta[name="viewport"][content*="maximum-scale=4"] {
+  outline: 1px dotted var(--viewportMaximumScaleLessThan5); }
+
+/* [_meta.scss]: xuaCompatible */
+meta[http-equiv="X-UA-Compatible"],
+meta[http-equiv][content="IE=edge"] {
+  outline: solid 1px var(--metaXUACompatibleObsolete); }
+
+:root {
+  --scriptObsoleteTypes: #E91E63;
+  --scriptNoAsyncOrDefer: #E91E63; }
+
+/* [_script.scss]: obsoleteTypes */
+script[type="text/javascript"],
+link[rel="stylesheet"][type="text/css"] {
+  outline: 1px dotted var(--scriptObsoleteTypes); }
+
+/* [_script.scss]: scriptNoAsyncOrDefer */
+script:not([async]):not([defer]) {
+  display: block;
+  padding: 1px;
+  background-color: var(--scriptNoAsyncOrDefer);
+  margin-bottom: 3px; }

@@ -1,0 +1,21 @@
+{
+  "name": "cssa11y-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --include-path ./node_modules ./example/scss/main.scss ./example/main.css",
+    "serve": "http-server ./example",
+    "start": "npm run scss && npm run serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cssa11y": "1.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "node-sass": "^5.0.0"
+  }
+}
