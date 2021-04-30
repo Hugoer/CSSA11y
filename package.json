@@ -10,14 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/Hugoer/CSSA11y.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["a11y", "lint", "good practices"],
+  "author": "Hugo Estévez Rocha",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hugoer/CSSA11y/issues"
+    "url": "https://github.com/Hugoer/CSSA11y/issues",
+    "email": "hugoerdev@gmail.com"
   },
   "homepage": "https://github.com/Hugoer/CSSA11y#readme",
   "dependencies": {
     "node-sass": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=8.15.0"
   }
 }
