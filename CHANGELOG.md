@@ -28,3 +28,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * Improve readme
 * Fix incorrect config for html mixin
 * Add before pseudoelement for notice wrong use of html and meta elements
+
+## 1.0.2
+* Update readme.md with working demo example
