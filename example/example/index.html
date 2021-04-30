@@ -7,7 +7,14 @@
   <link href="main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+  <p class="title">_a11y.scss 👇</p>
+
+  <p class="subtitle">inlineStyles()</p>
   <p style="margin-left: 10px;" >Inline styles</p>
+
+  <p class="subtitle">headings()</p>
+  <h1>First h1</h1>
+  <h1>Second h1</h1>
 
   <h5>h5</h5>
   <h1>Header</h1>
@@ -15,6 +22,7 @@
   <h2>h2</h2>
   <h3>h3</h3>
 
+  <p class="subtitle">linksValids()</p>
   <div>
     <a href="" aria-label="link with href empty">link with href empty</a>
   </div>
@@ -27,42 +35,59 @@
     <a aria-label="link without href">link with no href</a>
   </div>
 
+  <p class="subtitle">emptyActions()</p>
   <div>
     <p>empty link:</p>
     <a aria-label="empty link"></a>
   </div>
 
+  <p class="subtitle">linkWithoutAriaLabel()</p>
   <div>
     <a href="./">link without aria-label</a>
   </div>
 
+  <p class="subtitle">altRequired()</p>
   <img src="./netcentric-summit-2018.jpeg" width="500">
 
-  <form>
-    <p>Text without id:</p>
-    <input type="text">
+  <p class="title">_forms.scss 👇</p>
 
+  <p class="subtitle">formNoNameOrNotId()</p>
+  <form>
+    <p class="subtitle">noId()</p>
+    <p>Text without id:</p>
+    <input type="text" name="textExample">
+
+    <p class="subtitle">noName()</p>
+    <p>Text without name:</p>
+    <input type="text" id="noname">
+
+    <p class="subtitle">labelFor()</p>
     <p>Label without "for"</p>
     <label >Text with id:</label>
     <input type="text" id="textid" name="address">
 
+    <p class="subtitle">buttonNoType()</p>
     <button>Submit</button>
   </form>
 
+  <p class="title">_lists.scss 👇</p>
   <ul>
     <div>
+      <p class="subtitle">listChilds()</p>
       <li>First item</li>
     </div>
     <li>Second item (good)</li>
   </ul>
 
   <dl>
+    <p class="subtitle">dlChilds()</p>
     <p>Definition item</p>
     <dt>
       <dd>Good definition</dd>
     </dt>
   </dl>
 
+  <p class="subtitle">tabindex()</p>
   <button tabindex="-1">Button tabindex="-1"</button>
   
   <button tabindex="-2">Button tabindex="-2"</button>
