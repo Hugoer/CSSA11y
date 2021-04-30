@@ -7,3 +7,4 @@ yarn.lock
 .travis.yml
 .editorconfig
 coverage/
+example/node_modules/

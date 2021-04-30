@@ -1,3 +1,4 @@
 node_modules
 scss-lint.css
 package-lock.json
+example/node_modules
