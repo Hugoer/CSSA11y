@@ -7,7 +7,18 @@
 @mixin htmlLang {
   html:not([lang]),
   html[lang=""] {
-    outline: 1px dotted var(--htmlNoLang);
+    outline: 3px dotted var(--htmlNoLang);
+    &::before {
+      content: 'lang attribute missing';
+      display: inline-block;
+      background: var(--htmlNoLang);
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0.3em;
+      color: #fff;
+      font-size: 1.2rem;
+    }
   }
 }
 

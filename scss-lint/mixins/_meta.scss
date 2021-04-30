@@ -10,12 +10,34 @@
 @mixin utf8 {
   meta[charset]:not([charset="UTF-8"]) {
     outline: 1px dotted var(--metaWithCharsetIncorrect);
+    &::before {
+      content: 'meta charset incorrect';
+      display: inline-block;
+      background: var(--metaWithCharsetIncorrect);
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0.3em;
+      color: #fff;
+      font-size: 1.2rem;
+    }
   }
 }
 
 @mixin userScalable {
   meta[name="viewport"][content*="user-scalable=no"] {
     outline: 1px dotted var(--viewportUserScalableWrong);
+    &::before {
+      content: 'meta viewport:user-scalable wrong';
+      display: inline-block;
+      background: var(--viewportUserScalableWrong);
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0.3em;
+      color: #fff;
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -26,6 +48,17 @@
   meta[name="viewport"][content*="maximum-scale=3"],
   meta[name="viewport"][content*="maximum-scale=4"] {
     outline: 1px dotted var(--viewportMaximumScaleLessThan5);
+    &::before {
+      content: 'meta viewport:maximum scale less than 5';
+      display: inline-block;
+      background: var(--viewportMaximumScaleLessThan5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0.3em;
+      color: #fff;
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -33,6 +66,17 @@
   meta[http-equiv="X-UA-Compatible"],
   meta[http-equiv][content="IE=edge"] {
     outline: solid 1px var(--metaXUACompatibleObsolete);
+    &::before {
+      content: 'meta X-UACOMPATIBLE obsolete';
+      display: inline-block;
+      background: var(--metaXUACompatibleObsolete);
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 0.3em;
+      color: #fff;
+      font-size: 1.2rem;
+    }
   }
 }
 
