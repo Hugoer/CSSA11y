@@ -23,3 +23,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 1.0.0
 * Add custom properties to show the error in devtools and not only the selector
+
+## 1.0.1
+* Improve readme
+* Fix incorrect config for html mixin
+* Add before pseudoelement for notice wrong use of html and meta elements
