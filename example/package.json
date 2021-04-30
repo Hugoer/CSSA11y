@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cssa11y": "1.0.0"
+    "cssa11y": "1.0.1"
   },
   "devDependencies": {
     "http-server": "^0.12.3",
