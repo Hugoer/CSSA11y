@@ -31,3 +31,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 1.0.2
 * Update readme.md with working demo example
+
+## 1.0.3
+* Add aria-hidden validations
+* Update dependencies
+* Update node.js versions

@@ -14,7 +14,7 @@
 
 ## Prerequisites
 
-- node >=8.15.0
+- node >=12.6.0
 
 ## Install
 
@@ -33,7 +33,7 @@ npm install cssa11y
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check [issues page](https://github.com/Hugoer/CSSA11y/issues). 
+Feel free to check [issues page](https://github.com/Hugoer/CSSA11y/issues).
 
 ## Show your support
 

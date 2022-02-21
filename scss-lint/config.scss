@@ -16,7 +16,8 @@ $a11y : map-merge(
     "linksValids":          true,
     "linkWithoutAriaLabel": true,
     "altRequired":          true,
-    "emptyActions":         true
+    "emptyActions":         true,
+    "ariaHidden":           true,
   ),
   $a11y
 );
@@ -26,9 +27,9 @@ $form : map-merge(
   (
     "noId" :              true,
     "labelFor":           true,
-    "noName":             true, 
-    "formNoNameOrNotId":  true, 
-    "buttonNoType":       true 
+    "noName":             true,
+    "formNoNameOrNotId":  true,
+    "buttonNoType":       true
   ),
   $form
 );
@@ -46,7 +47,7 @@ $lists : map-merge(
   (
     "dlChilds" :  true,
     "listChilds": true,
-    "tabindex":   true 
+    "tabindex":   true
   ),
   $lists
 );
@@ -56,8 +57,8 @@ $meta : map-merge(
   (
     "utf8" :          true,
     "userScalable":   true,
-    "maximumScale":   true, 
-    "xuaCompatible":  true  
+    "maximumScale":   true,
+    "xuaCompatible":  true
   ),
   $meta
 );
