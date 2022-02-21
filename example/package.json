@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "http-server": "^0.12.3",
-    "node-sass": "^5.0.0"
+    "node-sass": "^7.0.0"
   },
   "engines": {
     "node": "10.13.0"
