@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Hugoer/CSSA11y#readme",
   "dependencies": {
-    "node-sass": "^5.0.0"
+    "node-sass": "^7.0.0"
   },
   "engines": {
     "node": ">=8.15.0"
