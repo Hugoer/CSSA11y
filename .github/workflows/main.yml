@@ -26,7 +26,7 @@ jobs:
         - uses: actions/setup-node@master
           with:
             node-version: 12
-        - run: "cd ../example && npm install && npm run scsss"
+        - run: "npm deploy:firebase"
         - uses: w9jds/firebase-action@master
           with:
             args: deploy --only hosting

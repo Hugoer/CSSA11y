@@ -4,7 +4,8 @@
   --linkRefInvalid: #F44336;
   --linkWithoutAriaLabel: #F44336;
   --altRequired: #F44336;
-  --emptyActions: #F44336; }
+  --emptyActions: #F44336;
+  --ariaHiddenFalseInsideAriaHiddenTrue: #F44336; }
 
 /* [_a11y.scss]: inlineStyles */
 *[style] {
@@ -67,6 +68,10 @@ a:empty {
     border-radius: 10px;
     transform: rotate(5deg);
     pointer-events: none; }
+
+/* [_a11y.scss]: ariaHidden */
+[aria-hidden="true"] [aria-hidden="false"] {
+  outline: 2px dotted var(--ariaHiddenFalseInsideAriaHiddenTrue); }
 
 :root {
   --elementWithoutId: #0097A7;
