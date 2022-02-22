@@ -26,8 +26,10 @@ jobs:
         - uses: actions/setup-node@master
           with:
             node-version: 12
-        - run: "npm run deploy:firebase"
+        - run: "npm install"
+          working-directory: ./example
         - uses: w9jds/firebase-action@master
+          working-directory: ./example
           with:
             args: deploy --only hosting
           env:

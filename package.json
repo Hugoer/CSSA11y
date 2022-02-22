@@ -3,8 +3,7 @@
   "version": "1.0.3",
   "description": "CSS helpers to improve a11y and html good practices",
   "scripts": {
-    "scss": "node-sass ./scss-lint/scss-lint.scss ./scss-lint.css",
-    "deploy:firebase" : "cd example && npm install && npm run scss"
+    "scss": "node-sass ./scss-lint/scss-lint.scss ./scss-lint.css"
   },
   "main": "scss-lint/scss-lint.scss",
   "repository": {

@@ -15,6 +15,7 @@
     "cssa11y": "1.0.3"
   },
   "devDependencies": {
+    "firebase-tools": "^10.2.1",
     "http-server": "^0.12.3",
     "node-sass": "^7.0.1"
   },
