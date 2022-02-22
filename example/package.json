@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cssa11y": "1.0.3"
+    "cssa11y": "1.0.4"
   },
   "devDependencies": {
     "firebase-tools": "^10.2.1",
