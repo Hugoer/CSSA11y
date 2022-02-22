@@ -36,3 +36,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * Add aria-hidden validations
 * Update dependencies
 * Update node.js versions
+
+## 1.0.4
+* Modify aria color validation

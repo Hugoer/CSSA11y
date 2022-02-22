@@ -1,10 +1,10 @@
 {
   "name": "cssa11y",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CSS helpers to improve a11y and html good practices",
   "scripts": {
     "scss": "node-sass ./scss-lint/scss-lint.scss ./scss-lint.css",
-    "build" : "cd example && npm i && npm run scss"
+    "build" : "cd example && npm i && npm i cssa11y@latest && npm run scss"
   },
   "main": "scss-lint/scss-lint.scss",
   "repository": {
