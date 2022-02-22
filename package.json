@@ -4,7 +4,7 @@
   "description": "CSS helpers to improve a11y and html good practices",
   "scripts": {
     "scss": "node-sass ./scss-lint/scss-lint.scss ./scss-lint.css",
-    "build" : "cd example && npm ci && npm i cssa11y@latest && npm run scss"
+    "build" : "cd example && npm i && npm i cssa11y@latest && npm run scss"
   },
   "main": "scss-lint/scss-lint.scss",
   "repository": {
